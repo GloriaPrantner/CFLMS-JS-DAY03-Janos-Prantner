@@ -8,12 +8,16 @@
 
 
     <script>
-        function ageCalculator (yearOfBirth, currentYear) {
-            var myAge1 = currentYear - yearOfBirth;
-            var myAge2 = currentYear - yearOfBirth -1;
+
+        var currentYear = new Date();
+        currentYear.setFullYear(2020);
+
+        function ageCalculator (yearOfBirth) {
+            var myAge1 = currentYear.getFullYear() - yearOfBirth;
+            var myAge2 = currentYear.getFullYear() - yearOfBirth -1;
             document.write("you are either " + myAge1 + " or " + myAge2);
         }
-        ageCalculator(1972,2020);
+        ageCalculator(1972);
 
 
 
